@@ -1,16 +1,16 @@
-document.getElementById('bool_time_limited').addEventListener('change', (event) => {
-  if (event.target.checked) {
-    document.getElementById('time_limit').parentElement.style.display = null;
-  } else {
-    document.getElementById('time_limit').parentElement.style.display = 'none';
-  }
-})
+// document.getElementById('bool_time_limited').addEventListener('change', (event) => {
+//   if (event.target.checked) {
+//     document.getElementById('time_limit').parentElement.style.display = null;
+//   } else {
+//     document.getElementById('time_limit').parentElement.style.display = 'none';
+//   }
+// })
 
 function startGame() {
     document.getElementById('start_form').style.display = 'none';
     document.getElementById('game').style.display = null;
 
-    let boolTimeLimited = document.getElementById("bool_time_limited").checked;
+    //let boolTimeLimited = document.getElementById("bool_time_limited").checked;
     let timeLimit = document.getElementById('time_limit').value;
     let nbOfNames = document.getElementById('nb_of_names').value;
 

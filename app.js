@@ -1,6 +1,5 @@
 const express = require('express')
 const app = express()
-const port = 3000
 const path = require('path')
 
 app.use(express.static('public'))
@@ -10,4 +9,8 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname + '/public/html/index.html'));
 })
 
-app.listen(port)
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+app.listen(port);
