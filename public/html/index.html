@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Site</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="../stylesheets/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+
+    
+  
+    <div id="start_form" class="row">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s3">
+                    <input  id="nb_of_names" value="2" min="1" max="200" type="number" class="validate">
+                    <label for="nb_of_names">Number of names to remember</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <p>
+                        <label>
+                            <input id="bool_time_limited" type="checkbox" class="filled-in" checked="checked" />
+                            <span>Limit time to remember name</span>
+                        </label>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s3">
+                    <input id="time_limit" value="1" min="1" type="number" class="validate">
+                    <label for="time_limit">Time limit (seconds)</label>
+                </div>
+            </div>
+        </form>
+
+        <button onclick="startGame()" class="btn waves-effect waves-light">Start!
+            <i class="material-icons right">send</i>
+        </button>
+    </div>
+
+    <div id="game" class="row" style="display: none;">
+        <img id="photo" src="">
+        <h4 id="name"></h4>
+        <div class="input-field col s3">
+            <input id="answer" type="text" style="display: none;">
+        </div>
+        <div class="input-field col s3">
+            <button id="show_answer" class="btn waves-effect waves-light" style="display: none;">Show answer
+            </button>
+        </div>
+
+        <form>
+            <button id="play-again" style="display: none;" class="btn waves-effect waves-light" type="submit" formaction="/">Play again!
+            <i class="material-icons right">replay</i>
+            </button>
+        </form>
+            
+    </div> 
+            
+
+    <script type="text/javascript" src="../javascripts/people.js"></script>
+    <script type="text/javascript" src="../javascripts/controller.js"></script>
+    <script type="text/javascript" src="../javascripts/materialize.min.js"></script>
+</body>
+</html>
